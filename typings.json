@@ -1,0 +1,7 @@
+{
+  "globalDependencies": {
+    "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#6697d6f7dadbf5773cb40ecda35a76027e0783b2",
+    "webpack": "github:DefinitelyTyped/DefinitelyTyped/webpack/webpack.d.ts#95c02169ba8fa58ac1092422efbd2e3174a206f4",
+    "node":"https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/7be68adbdff4bea14f33f54f27d3bdb5822e3b10/node/node.d.ts"
+  }
+}
