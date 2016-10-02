@@ -1,16 +1,24 @@
-var appSampleConfig = require('./src/webpack.config.app.sample.js');
+var webpack = require('webpack'),
+    appSampleDev = require('./app-sample/build/webpack.dev.js'),
+    appSampleProd = require('./app-sample/build/webpack.prod.js');
 
 module.exports = function(grunt) {
-
-  // Project configuration.
-
+    
+    // Project configuration.
     
   grunt.initConfig({
     
     pkg: grunt.file.readJSON('package.json'),
 
-    webpack: {
-        appsampleprod : appSampleConfig
+    webpack: {      
+        appsampleprod : appSampleProd
+    },
+    'webpack-dev-server' : {
+        appsampledev: {
+            keepAlive: true,
+            contentBase : './app-sample/app/',
+            webpack : appSampleDev
+        }
     },
 
     watch: {
@@ -18,7 +26,7 @@ module.exports = function(grunt) {
             files: ["app-sample/**/*"],
             tasks: ["webpack:build-dev"],
             options: {
-                spawn: false,
+                spawn: false
             }
         }
     },    
@@ -35,7 +43,7 @@ module.exports = function(grunt) {
                 return 'rimraf app-sample/dist';
             }
         },
-        'app-sample-dev' : {
+        'appsampledev' : {
             cmd : function(){
                 return 'webpack-dev-server --inline --progress --port 8080';
             }
@@ -53,7 +61,7 @@ module.exports = function(grunt) {
   // Production build
   grunt.registerTask('appsampleprod', ['exec:appsampleprod','webpack:appsampleprod','exec:start']);
   // The development server (the recommended option for development)
-  grunt.registerTask('app-sample-dev', ['exec:app-sample-dev']);
+  grunt.registerTask('appsampledev', ['webpack-dev-server:appsampledev']);
 
 
 };
