@@ -59,7 +59,7 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default',['exec:test']);
   // Production build
-  grunt.registerTask('appsampleprod', ['exec:appsampleprod','webpack:appsampleprod','exec:start']);
+  grunt.registerTask('appsampleprod', ['exec:appsampleprod','webpack:appsampleprod']);
   // The development server (the recommended option for development)
   grunt.registerTask('appsampledev', ['webpack-dev-server:appsampledev']);
 

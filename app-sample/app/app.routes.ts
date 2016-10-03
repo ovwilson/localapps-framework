@@ -1,11 +1,17 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
 import { HomeComponent } from './app.component.home';
 import { AboutComponent } from './app.component.about';
+import { ConfigMocksComponent } from './config-mocks/config-mocks.component';
+import { ConfigHttpComponent } from './config-http/config-http.component';
 
 const APPRROUTES: Routes = [
+  { path: './', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'configmocks', component: ConfigMocksComponent },
+  { path: 'confighttp', component: ConfigHttpComponent },
   { path: '**', component: HomeComponent }
 ];
 
