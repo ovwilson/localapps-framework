@@ -7,13 +7,13 @@ import 'rxjs/add/operator/map';
 
 export class ConfigHttpService {
 
-  private headers = new Headers({'Content-Type': 'application/json'});
-  private configUrl = 'app/config-http/config-http.json';  // URL to web api
+  //private headers = new Headers({'Content-Type': 'application/json'});
+  private configUrl = 'http://localhost:8080/config-http/config-http.json';  // URL to web api
 
   constructor(private http: Http) { }
 
   getConfig() {
-    return this.http.get(this.configUrl)
+    return this.http.get('http://localhost:8080/config-http/config-http.json')
      .map(response => <Config[]>response.json().data ); 
   }
   
