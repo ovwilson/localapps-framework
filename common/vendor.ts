@@ -23,3 +23,6 @@ import 'rxjs';
 //import 'rxjs/add/operator/switchMap';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
+
+import '../bower_components/jquery/dist/jquery.min.js';
+import '../bower_components/bootstrap/dist/js/bootstrap.min.js';

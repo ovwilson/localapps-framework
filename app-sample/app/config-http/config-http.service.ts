@@ -8,12 +8,12 @@ import 'rxjs/add/operator/map';
 export class ConfigHttpService {
 
   //private headers = new Headers({'Content-Type': 'application/json'});
-  private configUrl = 'http://localhost:8080/config-http/config-http.json';  // URL to web api
+  private configUrl = './config-http/config-http.json';  // URL to web api
 
   constructor(private http: Http) { }
 
   getConfig() {
-    return this.http.get('http://localhost:8080/config-http/config-http.json')
+    return this.http.get(this.configUrl)
      .map(response => <Config[]>response.json().data ); 
   }
   

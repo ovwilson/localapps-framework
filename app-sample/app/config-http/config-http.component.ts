@@ -7,7 +7,7 @@ import { Config } from '../config/config';
      template: 
      `<h1>Config-Http</h1> 
      <ul>    
-     <li *ngFor="let configuration of configurations">id: {{configuration.id}}- name: {{configuration.name}}<li>
+     <li *ngFor="let configuration of configurations">id: {{configuration.id}}- name: {{configuration.name}}</li>
      </ul>
      `
 })

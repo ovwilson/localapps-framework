@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './app.component.home';
 import { AboutComponent } from './app.component.about';
+import { FormComponent } from './forms/forms.component';
 import { ConfigMocksComponent } from './config-mocks/config-mocks.component';
 import { ConfigHttpComponent } from './config-http/config-http.component';
 
@@ -12,6 +13,7 @@ const APPRROUTES: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'configmocks', component: ConfigMocksComponent },
   { path: 'confighttp', component: ConfigHttpComponent },
+  { path: 'form', component: FormComponent },
   { path: '**', component: HomeComponent }
 ];
 

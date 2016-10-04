@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: helpers.root('src', 'app'),
+        include: helpers.root('public', 'app'),
         loader: 'raw'
       }
     ]

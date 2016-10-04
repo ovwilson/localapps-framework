@@ -16,9 +16,11 @@ import { ConfigHttpService } from './config-http/config-http.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './config/in-memory-data.service';
 
+import { FormComponent } from './forms/forms.component';
+
 @NgModule({
   imports: [ BrowserModule, APPROUTING, HttpModule, InMemoryWebApiModule.forRoot(InMemoryDataService) ],
-  declarations : [ AppComponent, HomeComponent, AboutComponent, ConfigMocksComponent, ConfigHttpComponent ],
+  declarations : [ AppComponent, HomeComponent, AboutComponent, FormComponent, ConfigMocksComponent, ConfigHttpComponent ],
   providers: [ APP_ROUTING_PROVIDERS, HttpModule, ConfigMocksService, ConfigHttpService ],
   bootstrap: [ AppComponent ]
 })
