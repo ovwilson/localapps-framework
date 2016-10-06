@@ -24,12 +24,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
+        exclude: helpers.root('app-sample', 'app'),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
       },
       {
         test: /\.css$/,
-        include: helpers.root('public', 'app'),
+        include: helpers.root('app-sample', 'app'),
         loader: 'raw'
       }
     ]

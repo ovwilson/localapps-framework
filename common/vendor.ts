@@ -24,5 +24,5 @@ import 'rxjs';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
 
-import '../bower_components/jquery/dist/jquery.min.js';
-import '../bower_components/bootstrap/dist/js/bootstrap.min.js';
+import '../node_modules/jquery/dist/cdn/jquery.min.js';
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';

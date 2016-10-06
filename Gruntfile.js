@@ -16,6 +16,7 @@ module.exports = function(grunt) {
     'webpack-dev-server' : {
         appsampledev: {
             keepAlive: true,
+            publicPath:"/",
             contentBase : './app-sample/app/',
             webpack : appSampleDev
         }

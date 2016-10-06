@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import '../public/styles.css';
 
 @Component({
     selector: 'my-sample',
@@ -12,8 +13,7 @@ import { Component, OnInit } from '@angular/core';
         <a routerLink="/confighttp" routerLinkActive="active">Configuration-Http</a>
       </nav>
       <router-outlet></router-outlet>
-    `,
-    styleUrls : ['./app.component.css']   
+    `   
 })
 
 export class AppComponent {}

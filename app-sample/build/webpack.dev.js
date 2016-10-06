@@ -25,7 +25,8 @@ module.exports = webpackMerge(commonConfig, {
   devServer: {
     historyApiFallback: true,
     stats: 'minimal',
-    inline : true    
+    inline : true,
+    hot:true    
   },
 
   plugins: [
@@ -36,8 +37,10 @@ module.exports = webpackMerge(commonConfig, {
     new HtmlWebpackPlugin({
       template: './app-sample/index.html'
     }),
+    new webpack.ProvidePlugin({
+      $:'jquery',jQuery:'jquery'
+    }),
     // End Necessary plugins
-
     new ExtractTextPlugin('[name].css')
   ]
   
