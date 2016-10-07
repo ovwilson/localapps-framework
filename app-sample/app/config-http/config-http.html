@@ -1,0 +1,43 @@
+<h2>My Configurations</h2>
+<div>
+  <label>Config name:</label> <input type="text" class="form-control" #configName />
+  <button class="btn btn-primary" (click)="add(configName.value); configName.value=''">
+    Add
+  </button>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>View</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let configuration of configurations">
+          <td>{{configuration.id}}</td>
+          <td>{{configuration.name}}</td>
+          <td><button class="btn btn-primary view" (click)="onSelect(configuration);">View</button></td>
+          <td><button class="btn btn-danger delete" (click)="delete(configuration); $event.stopPropagation()">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div *ngIf="selectedConfig">
+      <h2>
+        {{selectedConfig.name | uppercase}} is my configuration
+      </h2>
+      <button (click)="gotoDetail()">View Details</button>
+    </div>
+
+  </div>
+
+</div>

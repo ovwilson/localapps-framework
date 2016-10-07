@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     'webpack-dev-server' : {
         appsampledev: {
             keepAlive: true,
-            publicPath:"/",
+            publicPath:'/',            
             contentBase : './app-sample/app/',
             webpack : appSampleDev
         }
@@ -42,11 +42,6 @@ module.exports = function(grunt) {
         'appsampleprod' : {
             cmd : function(){
                 return 'rimraf app-sample/dist';
-            }
-        },
-        'appsampledev' : {
-            cmd : function(){
-                return 'webpack-dev-server --inline --progress --port 8080';
             }
         }
     }

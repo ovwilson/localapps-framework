@@ -10,7 +10,7 @@
     "tasks": [
         {
             "taskName": "build-dev-server",
-            "args": ["grunt appsampledev"],
+            "args": ["npm start"],
             "suppressTaskName": true,
             "isBuildCommand": true,
             "isWatching": false

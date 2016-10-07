@@ -1,0 +1,12 @@
+
+<div *ngIf="config">
+  <h2>{{config.name}} details!</h2>
+  <div>
+    <label>id: </label>{{config.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="config.name" type="text" class="form-control" placeholder="name" />
+   </div>
+  <button class="btn btn-primary" (click)="goBack()">Back</button>
+  <button class="btn btn-primary" (click)="save()">Save</button>
+</div>

@@ -24,9 +24,7 @@ module.exports = webpackMerge(commonConfig, {
 
   devServer: {
     historyApiFallback: true,
-    stats: 'minimal',
-    inline : true,
-    hot:true    
+    stats: 'minimal'
   },
 
   plugins: [
