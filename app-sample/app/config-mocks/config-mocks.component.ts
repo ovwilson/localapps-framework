@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
 import { ConfigMocksService } from './config-mocks.service';
-import { Config } from '../config/config';
+import { Config } from './../models/config';
 
 @Component({
      template: 

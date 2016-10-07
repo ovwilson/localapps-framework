@@ -1,4 +1,4 @@
-import { Config } from '../config/config';
+import { Config } from './../models/config';
 
 export let ConfigMocks: Config[] = [
     {"id":787,"name":"Felix"},

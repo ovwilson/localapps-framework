@@ -14,12 +14,12 @@ import { ConfigHttpService } from './config-http/config-http.service';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './config/in-memory-data.service';
+import { ConfigInMemoryData }  from './config-http/config-in-memory-data';
 
 import { FormComponent } from './forms/forms.component';
 
 @NgModule({
-  imports: [ BrowserModule, APPROUTING, HttpModule, InMemoryWebApiModule.forRoot(InMemoryDataService) ],
+  imports: [ BrowserModule, APPROUTING, HttpModule, InMemoryWebApiModule.forRoot(ConfigInMemoryData) ],
   declarations : [ AppComponent, HomeComponent, AboutComponent, FormComponent, ConfigMocksComponent, ConfigHttpComponent ],
   providers: [ APP_ROUTING_PROVIDERS, HttpModule, ConfigMocksService, ConfigHttpService ],
   bootstrap: [ AppComponent ]

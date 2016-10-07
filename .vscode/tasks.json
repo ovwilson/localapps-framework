@@ -2,19 +2,18 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "grunt",
+    "command": "cmd",
     "isShellCommand": true,
+    "echoCommand": true,
+    "showOutput": "always",
+    "args": ["/C"],
     "tasks": [
         {
-            "taskName": "default",
-            "args": [],
+            "taskName": "build-dev-server",
+            "args": ["grunt appsampledev"],
+            "suppressTaskName": true,
             "isBuildCommand": true,
-            "isWatching": false,
-            "problemMatcher": [
-                "$lessCompile",
-                "$tsc",
-                "$jshint"
-            ]
+            "isWatching": false
         }
     ]
 }

@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     watch: {
         appsample: {
             files: ["app-sample/**/*"],
-            tasks: ["webpack:build-dev"],
+            tasks: ["webpack:appSampleProd"],
             options: {
                 spawn: false
             }

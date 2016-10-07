@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import '../public/styles.css';
+import './../public/styles.css';
+import './../../common/rxjs-extensions';
 
 @Component({
     selector: 'my-sample',

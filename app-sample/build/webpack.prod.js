@@ -5,7 +5,7 @@ var webpack = require('webpack'),
     commonConfig = require('../../common/webpack.common.js'),
     helpers = require('../../common/helpers');
 
-const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
+const ENV = process.env.NODE_ENV = process.env.ENV = 'PRODUCTION';
 
 module.exports = webpackMerge(commonConfig, {
   

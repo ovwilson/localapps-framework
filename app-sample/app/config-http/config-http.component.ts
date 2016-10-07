@@ -1,7 +1,7 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ConfigHttpService } from './config-http.service';
-import { Config } from '../config/config';
+import { Config } from './../models/config';
 
 @Component({
      template: 
@@ -9,18 +9,27 @@ import { Config } from '../config/config';
      <ul>    
      <li *ngFor="let configuration of configurations">id: {{configuration.id}}- name: {{configuration.name}}</li>
      </ul>
-     `
+     `,
+     providers : [ ConfigHttpService ]
 })
 
-export class ConfigHttpComponent {
+export class ConfigHttpComponent implements OnInit {
 
   configurations: Config[];
+  errorMessage : string;
+  mode = 'Observable';
 
   constructor(private configHttpService: ConfigHttpService) {}
 
    ngOnInit() {
-      this.configHttpService.getConfig()
-        .subscribe(configurations => this.configurations = configurations);
+      this.getConfig();
+  }
+
+   getConfig() {
+    this.configHttpService.getConfig()
+                     .subscribe(
+                       configurations => this.configurations = configurations,
+                       error =>  this.errorMessage = <any>error);
   }
 
 }
