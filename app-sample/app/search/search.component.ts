@@ -7,27 +7,30 @@ import { ConfigSearchService } from './search.service';
 import { Config } from './../models/config';
 
 @Component({
-  selector: 'configuration-search',
   templateUrl: './search.config.html',
   styleUrls: [ './search.config.css' ],
   providers: [ ConfigSearchService ]
 })
+
 export class ConfigSearchComponent implements OnInit {
   
-  config: Observable<Config[]>;
+  configurations: Observable<Config[]>;
   private searchTerms = new Subject<string>();
   
-  constructor(private configHttpService: ConfigSearchService, private router: Router) {}
+  constructor(private configSearchService: ConfigSearchService, private router: Router) {}
+
   // Push a search term into the observable stream.
-  search(term: string): void { this.searchTerms.next(term); }
+  search(term: string): void {
+        this.searchTerms.next(term); 
+  }
 
   ngOnInit(): void {
-    this.config = this.searchTerms
+    this.configurations = this.searchTerms
       .debounceTime(300)        // wait for 300ms pause in events
       .distinctUntilChanged()   // ignore if next search term is same as previous
       .switchMap(term => term   // switch to new observable each time
         // return the http search observable
-        ? this.configHttpService.search(term)
+        ? this.configSearchService.search(term)
         // or the observable of empty heroes if no search term
         : Observable.of<Config[]>([]))
       .catch(error => {
@@ -36,8 +39,10 @@ export class ConfigSearchComponent implements OnInit {
         return Observable.of<Config[]>([]);
       });
   }
+
   gotoDetail(config: Config): void {
     let link = ['/form', config.id];
     this.router.navigate(link);
   }
+
 }
