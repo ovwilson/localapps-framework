@@ -30,5 +30,3 @@ import { FormComponent } from './forms/forms.component';
 })
 
 export class AppModule {}
-
-

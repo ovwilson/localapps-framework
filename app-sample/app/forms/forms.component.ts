@@ -6,9 +6,9 @@ import { Config } from './../models/config';
 import { ConfigHttpService } from './../config-http/config-http.service';
 
 @Component({
-    //selector: 'my-hero-detail',
     templateUrl: './forms.html'
 })
+
 export class FormComponent implements OnInit {
 
     config: Config;
@@ -22,11 +22,14 @@ export class FormComponent implements OnInit {
                 .then(config => this.config = config);
         });
     }
+
     save(): void {
         this.configHttpService.update(this.config)
             .then(() => this.goBack());
     }
+
     goBack(): void {
         this.location.back();
     }
+
 }
