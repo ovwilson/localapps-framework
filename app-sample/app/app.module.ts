@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './app.component.home';
 import { AboutComponent } from './app.component.about';
+import { DocumentsComponent } from './documents/documents.component';
 
 import { ConfigMocksComponent } from './config-mocks/config-mocks.component';
 import { ConfigMocksService } from './config-mocks/config-mocks.service';
@@ -24,7 +25,7 @@ import { FormComponent } from './forms/forms.component';
 
 @NgModule({
   imports: [ BrowserModule, APPROUTING, HttpModule, InMemoryWebApiModule.forRoot(ConfigInMemoryData), FormsModule ],
-  declarations : [ AppComponent, HomeComponent, AboutComponent, FormComponent, ConfigMocksComponent, ConfigHttpComponent, ConfigSearchComponent ],
+  declarations : [ AppComponent, HomeComponent, AboutComponent, FormComponent, DocumentsComponent, ConfigMocksComponent, ConfigHttpComponent, ConfigSearchComponent ],
   providers: [ APP_ROUTING_PROVIDERS, HttpModule, ConfigMocksService, ConfigHttpService, ConfigSearchService ],
   bootstrap: [ AppComponent ]
 })

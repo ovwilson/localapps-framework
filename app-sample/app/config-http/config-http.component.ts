@@ -26,6 +26,7 @@ export class ConfigHttpComponent implements OnInit {
         .getConfigs()
         .then(configurations => this.configurations = configurations);
   }
+
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
@@ -35,6 +36,7 @@ export class ConfigHttpComponent implements OnInit {
         this.selectedConfig = null;
       });
   }
+  
   delete(config: Config): void {
     this.configHttpService
         .delete(config.id)

@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Location } from '@angular/common';
 import { Config } from './../models/config';
+import { DocumentsComponent } from './../documents/documents.component';
 import { ConfigHttpService } from './../config-http/config-http.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { ConfigHttpService } from './../config-http/config-http.service';
 export class FormComponent implements OnInit {
 
     config: Config;
-
+    
     constructor(private configHttpService: ConfigHttpService, private route: ActivatedRoute, private location: Location) { }
 
     ngOnInit(): void {
