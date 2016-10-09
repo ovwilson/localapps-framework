@@ -1,7 +1,7 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-export class DocumentInMemoryData implements InMemoryDbService {
+export class DocumentsInMemoryData implements InMemoryDbService {
   createDb() {
-    let document = [{
+    let documents = [{
   "id": 1,
   "filename": "Ipsum.ppt",
   "filepath": "com.wikia.Quo Lux"
@@ -402,6 +402,6 @@ export class DocumentInMemoryData implements InMemoryDbService {
   "filename": "Aliquam.xls",
   "filepath": "cc.tiny.Voltsillam"
 }];
-    return {document};
+    return {documents};
   }
 }
