@@ -11,7 +11,7 @@ import 'rxjs/add/operator/toPromise';
 
 export class ConfigHttpService {
   
-  private configUrl = 'config-http/configuration';  // URL to web API
+  private configUrl = 'database/configuration';  // URL to web API
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor (private http: Http) {}

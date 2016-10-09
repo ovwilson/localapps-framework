@@ -1,7 +1,7 @@
 <div class="container-fluid" class="document-view" *ngIf="selectedConfig">
 
     <h4>Documents for {{selectedConfig.name}}</h4>
-    <button class="btn btn-primary view" (click)="getDocuments();">Get Documents</button>
+    <button class="btn btn-primary view" (click)="getDocuments();">Refresh</button>
 
     <div class="list-group">
         <a href="#" class="list-group-item active" *ngFor="let document of documents">

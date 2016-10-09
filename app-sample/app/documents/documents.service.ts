@@ -11,7 +11,7 @@ import { Document } from './../models/document';
 
 export class DocumentsService {
 
-  private documentUrl = 'documents/documents';
+  private documentUrl = 'database/documents';
   
   constructor(private http: Http) { }
 

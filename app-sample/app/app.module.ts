@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { APPROUTING, APP_ROUTING_PROVIDERS } from './app.routes';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -21,10 +22,7 @@ import { ConfigSearchComponent } from './search/search.component';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { ConfigInMemoryData } from './config-http/config-in-memory-data';
-//import { DocumentsInMemoryData } from './documents/documents-in-memory-data';
-//import { CommentsInMemoryData } from './comments/comments-in-memory-data';
-
+import { InMemoryData } from './database/in-memory.data';
 import { FormComponent } from './forms/forms.component';
 
 @NgModule({
@@ -32,9 +30,7 @@ import { FormComponent } from './forms/forms.component';
     BrowserModule,
     APPROUTING,
     HttpModule,
-    InMemoryWebApiModule.forRoot(ConfigInMemoryData),
-    //InMemoryWebApiModule.forRoot(DocumentsInMemoryData),
-    //InMemoryWebApiModule.forRoot(CommentsInMemoryData),
+    InMemoryWebApiModule.forRoot(InMemoryData),
     FormsModule
   ],
   declarations: [

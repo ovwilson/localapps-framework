@@ -12,7 +12,7 @@ export class ConfigSearchService {
 
   search(term: string): Observable<Config[]> {
     return this.http
-      .get(`config-http/configuration/?name=${term}`)
+      .get(`datatbase/configuration/?name=${term}`)
       .map((response: Response) => response.json().data as Config[]);
   }
 }
