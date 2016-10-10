@@ -46,9 +46,14 @@ export class ConfigHttpComponent implements OnInit {
         });
   }
 
-  onSelect(config: Config): void {
+  onView(config: Config): void {
     this.selectedConfig = config;
   }
+
+  onEdit(config: Config): void {
+    this.router.navigate(['/form', config.id]);
+  }
+
   gotoDetail(): void {
     this.router.navigate(['/form', this.selectedConfig.id]);
   }

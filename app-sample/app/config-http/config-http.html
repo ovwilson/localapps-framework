@@ -8,13 +8,14 @@
 
 
 <div class="row">
-  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 config-table">
     <table class="table table-condensed">
       <thead>
         <tr>
           <th>ID</th>
           <th>Name</th>
           <th>View</th>
+          <th>Edit</th>
           <th>Remove</th>
         </tr>
       </thead>
@@ -22,7 +23,8 @@
         <tr *ngFor="let configuration of configurations">
           <td>{{configuration.id}}</td>
           <td>{{configuration.name}}</td>
-          <td><button class="btn btn-primary view" (click)="onSelect(configuration);">View</button></td>
+          <td><button class="btn btn-primary view" (click)="onView(configuration);">View</button></td>
+           <td><button class="btn btn-primary edit" (click)="onEdit(configuration);">Edit</button></td>
           <td><button class="btn btn-danger delete" (click)="delete(configuration); $event.stopPropagation()">Remove</button></td>
         </tr>
       </tbody>
@@ -35,7 +37,7 @@
       <h2>
         {{selectedConfig.name | uppercase}} is my configuration
       </h2>
-      <button (click)="gotoDetail()">View Details</button>
+      <button class="btn btn-primary" (click)="gotoDetail()">Edit</button>
     </div>
 
   </div>

@@ -4,7 +4,7 @@
   "description": "Framework designed for development, testing, and deployment of Angular 2 applicaitons.",
   "main": "devserver.js",
   "scripts": {
-    "start" : "webpack-dev-server --inline --progress --port 8080",
+    "start": "webpack-dev-server --inline --progress --port 8080",
     "test": ""
   },
   "author": "Orlando Wilson",

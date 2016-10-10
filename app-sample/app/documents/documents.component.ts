@@ -19,7 +19,7 @@ export class DocumentsComponent {
   @Input('selectedConfig') selectedConfig: Config;
 
   documents: Document[];
-  document : Document;
+  
   constructor(private documentsService: DocumentsService) { }
 
   ngOnInit(): void {
@@ -27,9 +27,9 @@ export class DocumentsComponent {
   }
 
   getDocuments(): void {
-    this.documentsService.getDocuments()
-         //.then(documents => this.documents.push(documents) );
-     .then(documents => this.documents = documents );
+    console.log(this.selectedConfig.id);
+    this.documentsService.getDocumentsById(this.selectedConfig.id)
+    .then(documents => this.documents = documents );
   }
 
 }

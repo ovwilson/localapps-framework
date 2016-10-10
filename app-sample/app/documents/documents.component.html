@@ -1,12 +1,12 @@
 <div class="container-fluid" class="document-view" *ngIf="selectedConfig">
 
-    <h4>Documents for {{selectedConfig.name}}</h4>
+    <h4>Documents for id: {{selectedConfig.id}} name: {{selectedConfig.name}}</h4>
     <button class="btn btn-primary view" (click)="getDocuments();">Refresh</button>
 
     <div class="list-group">
-        <a href="#" class="list-group-item active" *ngFor="let document of documents">
-            <h4 class=" list-group-item-heading ">{{document.filename}}</h4>
-            <p class="list-group-item-text ">{{document.filepath}}</p>
+        <a href="#" class="list-group-item" *ngFor="let document of documents">
+            <h4 class=" list-group-item-heading">{{document.filename}}</h4>
+            <p class="list-group-item-text">{{document.id}}: {{document.filepath}}</p>
         </a>
     </div>
 </div>

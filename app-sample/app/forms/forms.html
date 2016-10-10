@@ -1,8 +1,8 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="config">
 
   <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <div *ngIf="config">
+      <div>
         <h2>{{config.name}} details!</h2>
         <div>
           <label>id: </label>{{config.id}}</div>
@@ -17,6 +17,7 @@
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <app-documents [selectedConfig]="config"></app-documents>
+        <app-comments [selectedConfig]="config"></app-comments>
     </div>
   </div>
 

@@ -11,6 +11,9 @@ import { AboutComponent } from './app.component.about';
 import { DocumentsComponent } from './documents/documents.component';
 import { DocumentsService } from './documents/documents.service';
 
+import { CommentsComponent } from './comments/comments.component';
+import { CommentsService } from './comments/comments.service';
+
 import { ConfigMocksComponent } from './config-mocks/config-mocks.component';
 import { ConfigMocksService } from './config-mocks/config-mocks.service';
 
@@ -39,6 +42,7 @@ import { FormComponent } from './forms/forms.component';
     AboutComponent,
     FormComponent,
     DocumentsComponent,
+    CommentsComponent,
     ConfigMocksComponent,
     ConfigHttpComponent,
     ConfigSearchComponent
@@ -49,7 +53,8 @@ import { FormComponent } from './forms/forms.component';
     ConfigMocksService,
     ConfigHttpService,
     ConfigSearchService,
-    DocumentsService
+    DocumentsService,
+    CommentsService
   ],
   bootstrap: [AppComponent]
 })

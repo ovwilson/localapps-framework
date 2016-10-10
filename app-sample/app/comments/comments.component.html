@@ -1,0 +1,12 @@
+<div class="container-fluid" class="comment-view" *ngIf="selectedConfig">
+
+    <h4>Comments for id: {{selectedConfig.id}} name: {{selectedConfig.name}}</h4>
+    <button class="btn btn-primary view" (click)="getComments();">Refresh</button>
+
+    <div class="list-group">
+        <a href="#" class="list-group-item" *ngFor="let comment of comments">
+            <h4 class=" list-group-item-heading">{{comment.name}}</h4>
+            <p class="list-group-item-text">{{comment.id}}: {{comment.text}}</p>
+        </a>
+    </div>
+</div>

@@ -5,28 +5,28 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/toPromise';
 
-import { Document } from './../models/document';
+import { Comment } from './../models/comment';
 
 @Injectable()
 
-export class DocumentsService {
+export class CommentsService {
 
-  private documentUrl = 'database/documents';
+  private commentUrl = 'database/comments';
   
   constructor(private http: Http) { }
 
-  getDocuments(): Promise<Document[]> {
-    return this.http.get(this.documentUrl)
+  getComments(): Promise<Comment[]> {
+    return this.http.get(this.commentUrl)
       .toPromise()
-      .then(response => response.json().data as Document[])
+      .then(response => response.json().data as Comment[])
       .catch(this.handleError);
   }
 
-  getDocumentsById(id: number): Promise<Document[]> {
-    var url : string = this.documentUrl+`/?id=^${id}$`;
+  getCommentsById(id: number): Promise<Comment[]> {
+    var url : string = this.commentUrl+`/?id=^${id}$`;
     console.log(url); 
     return this.http.get(url)
-      .toPromise().then(response => response.json().data as Document[])
+      .toPromise().then(response => response.json().data as Comment[])
       .catch(this.handleError);
   }
 
