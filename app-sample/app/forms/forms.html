@@ -1,18 +1,37 @@
+
+{{diagnostic}}
+
 <div class="container-fluid" *ngIf="config">
 
-  <div class="row">
+  <div class="row" [hidden]="submitted">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <div>
+      
+      <form id="configForm" name="configForm" *ngIf="active" (ngSubmit)="onSubmit()" #configForm="ngForm">
         <h2>{{config.name}} details!</h2>
+        <div><label>id: </label>{{config.id}}</div>
+        
         <div>
-          <label>id: </label>{{config.id}}</div>
-        <div>
-          <label>name: </label>
-          <input [(ngModel)]="config.name" type="text" class="form-control" placeholder="name" />
+          <label>Name: </label>
+          <input id="name" name="name" [(ngModel)]="config.name" #name="ngModel" type="text" class="form-control" placeholder="name" required />
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required</div>
         </div>
+
+        <div>
+          <label>Status: </label>
+          <select id="status" name="status" class="form-control" id="status" [(ngModel)]="config.status" required>
+            <option *ngFor="let s of status" [value]="s">{{s.name}}</option> 
+          </select>             
+        </div>
+
+        <div>
+          <label>Comment: </label>
+          <textarea id="comment" name="comment" rows="4" cols="6" [(ngModel)]="config.comment" #comment="ngModel" class="form-control"></textarea>
+          <div [hidden]="comment.valid || comment.pristine" class="alert alert-danger">Comment is required</div>
+        </div>
+
         <button class="btn btn-primary" (click)="goBack()">Back</button>
-        <button class="btn btn-primary" (click)="save()">Save</button>
-      </div>
+        <button type="submit" class="btn btn-primary" (click)="save()" [disabled]="!configForm.form.valid">Save</button>
+      </form>
 
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">

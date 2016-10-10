@@ -1,306 +1,39 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryData implements InMemoryDbService {
     createDb() {
+        
+        let status = [
+            {name:"Draft"},
+            {name:"Pending"},
+            {name:"Rejected"},
+            {name:"Completed"}
+        ];
+        
         let configuration = [{
             "id": 1,
-            "name": "Livefish"
+            "name": "Livefish",
+            "status":"Pending",
+            "comments":"Here are my comments"
         }, {
             "id": 2,
-            "name": "Flashdog"
+            "name": "Flashdog",
+            "status":"Pending",
+            "comments":"Here are my comments"
         }, {
             "id": 3,
-            "name": "Rhynyx"
+            "name": "Rhynyx",
+            "status":"Pending",
+            "comments":"Here are my comments"
         }, {
             "id": 4,
-            "name": "Fivechat"
+            "name": "Fivechat",
+            "status":"Pending",
+            "comments":"Here are my comments"
         }, {
             "id": 5,
-            "name": "Rhynoodle"
-        }, {
-            "id": 6,
-            "name": "Tagcat"
-        }, {
-            "id": 7,
-            "name": "Livefish"
-        }, {
-            "id": 8,
-            "name": "Voonix"
-        }, {
-            "id": 9,
-            "name": "Zoomlounge"
-        }, {
-            "id": 10,
-            "name": "Meevee"
-        }, {
-            "id": 11,
-            "name": "Feedmix"
-        }, {
-            "id": 12,
-            "name": "Roombo"
-        }, {
-            "id": 13,
-            "name": "Eimbee"
-        }, {
-            "id": 14,
-            "name": "Quinu"
-        }, {
-            "id": 15,
-            "name": "Fiveclub"
-        }, {
-            "id": 16,
-            "name": "Digitube"
-        }, {
-            "id": 17,
-            "name": "Twitterworks"
-        }, {
-            "id": 18,
-            "name": "Realpoint"
-        }, {
-            "id": 19,
-            "name": "Gabspot"
-        }, {
-            "id": 20,
-            "name": "Skipfire"
-        }, {
-            "id": 21,
-            "name": "Youbridge"
-        }, {
-            "id": 22,
-            "name": "Yodoo"
-        }, {
-            "id": 23,
-            "name": "Meetz"
-        }, {
-            "id": 24,
-            "name": "Mynte"
-        }, {
-            "id": 25,
-            "name": "Meejo"
-        }, {
-            "id": 26,
-            "name": "Topdrive"
-        }, {
-            "id": 27,
-            "name": "Ntags"
-        }, {
-            "id": 28,
-            "name": "Quaxo"
-        }, {
-            "id": 29,
-            "name": "Dynava"
-        }, {
-            "id": 30,
-            "name": "Riffwire"
-        }, {
-            "id": 31,
-            "name": "Eamia"
-        }, {
-            "id": 32,
-            "name": "Yozio"
-        }, {
-            "id": 33,
-            "name": "Lajo"
-        }, {
-            "id": 34,
-            "name": "Edgeblab"
-        }, {
-            "id": 35,
-            "name": "Mudo"
-        }, {
-            "id": 36,
-            "name": "Skilith"
-        }, {
-            "id": 37,
-            "name": "Buzzbean"
-        }, {
-            "id": 38,
-            "name": "Tavu"
-        }, {
-            "id": 39,
-            "name": "Skiptube"
-        }, {
-            "id": 40,
-            "name": "Npath"
-        }, {
-            "id": 41,
-            "name": "Yakijo"
-        }, {
-            "id": 42,
-            "name": "Centizu"
-        }, {
-            "id": 43,
-            "name": "Omba"
-        }, {
-            "id": 44,
-            "name": "Dabvine"
-        }, {
-            "id": 45,
-            "name": "Skaboo"
-        }, {
-            "id": 46,
-            "name": "Oyope"
-        }, {
-            "id": 47,
-            "name": "Linktype"
-        }, {
-            "id": 48,
-            "name": "Wordpedia"
-        }, {
-            "id": 49,
-            "name": "Tagchat"
-        }, {
-            "id": 50,
-            "name": "Realpoint"
-        }, {
-            "id": 51,
-            "name": "Blognation"
-        }, {
-            "id": 52,
-            "name": "Pixonyx"
-        }, {
-            "id": 53,
-            "name": "Skalith"
-        }, {
-            "id": 54,
-            "name": "Photobug"
-        }, {
-            "id": 55,
-            "name": "Kanoodle"
-        }, {
-            "id": 56,
-            "name": "Tagopia"
-        }, {
-            "id": 57,
-            "name": "Demivee"
-        }, {
-            "id": 58,
-            "name": "Browsecat"
-        }, {
-            "id": 59,
-            "name": "Fanoodle"
-        }, {
-            "id": 60,
-            "name": "Demivee"
-        }, {
-            "id": 61,
-            "name": "Yacero"
-        }, {
-            "id": 62,
-            "name": "Meedoo"
-        }, {
-            "id": 63,
-            "name": "Izio"
-        }, {
-            "id": 64,
-            "name": "Zava"
-        }, {
-            "id": 65,
-            "name": "Jaxbean"
-        }, {
-            "id": 66,
-            "name": "Oyonder"
-        }, {
-            "id": 67,
-            "name": "Mybuzz"
-        }, {
-            "id": 68,
-            "name": "Skinix"
-        }, {
-            "id": 69,
-            "name": "Twimbo"
-        }, {
-            "id": 70,
-            "name": "Twitterworks"
-        }, {
-            "id": 71,
-            "name": "Yambee"
-        }, {
-            "id": 72,
-            "name": "Riffwire"
-        }, {
-            "id": 73,
-            "name": "Skivee"
-        }, {
-            "id": 74,
-            "name": "Jaxnation"
-        }, {
-            "id": 75,
-            "name": "Eabox"
-        }, {
-            "id": 76,
-            "name": "Rhynyx"
-        }, {
-            "id": 77,
-            "name": "Zoomdog"
-        }, {
-            "id": 78,
-            "name": "Jabbersphere"
-        }, {
-            "id": 79,
-            "name": "Youfeed"
-        }, {
-            "id": 80,
-            "name": "Feedfire"
-        }, {
-            "id": 81,
-            "name": "Devcast"
-        }, {
-            "id": 82,
-            "name": "Tavu"
-        }, {
-            "id": 83,
-            "name": "Youtags"
-        }, {
-            "id": 84,
-            "name": "Buzzster"
-        }, {
-            "id": 85,
-            "name": "Roombo"
-        }, {
-            "id": 86,
-            "name": "Twitterlist"
-        }, {
-            "id": 87,
-            "name": "Rhynyx"
-        }, {
-            "id": 88,
-            "name": "Topicshots"
-        }, {
-            "id": 89,
-            "name": "Aivee"
-        }, {
-            "id": 90,
-            "name": "Realblab"
-        }, {
-            "id": 91,
-            "name": "Buzzshare"
-        }, {
-            "id": 92,
-            "name": "Zoombox"
-        }, {
-            "id": 93,
-            "name": "Gevee"
-        }, {
-            "id": 94,
-            "name": "Flashspan"
-        }, {
-            "id": 95,
-            "name": "Avavee"
-        }, {
-            "id": 96,
-            "name": "Voolia"
-        }, {
-            "id": 97,
-            "name": "Realpoint"
-        }, {
-            "id": 98,
-            "name": "Edgeify"
-        }, {
-            "id": 99,
-            "name": "Rhybox"
-        }, {
-            "id": 100,
-            "name": "Ailane"
+            "name": "Rhynoodle",
+            "status":"Pending",
+            "comments":"Here are my comments"
         }];
 
 
@@ -1208,6 +941,6 @@ export class InMemoryData implements InMemoryDbService {
             "name": "Charles Foster"
         }];
 
-        return { configuration, documents, comments };
+        return { configuration, documents, comments, status };
     }
 }
