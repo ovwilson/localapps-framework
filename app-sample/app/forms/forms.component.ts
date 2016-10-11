@@ -17,8 +17,6 @@ export class FormComponent implements OnInit {
     config: Config;
     status: Status[];
     submitted = false;
-
-    model : {id:5,name:"Orlando",status:"Pending",comment:"my comment"};
     
     active = true;
     
@@ -35,6 +33,7 @@ export class FormComponent implements OnInit {
 
     onSubmit(){
         this.submitted = true;
+        //this.save;
     }
     
     getStatus() : void {
@@ -51,6 +50,6 @@ export class FormComponent implements OnInit {
         this.location.back();
     }
 
-    get diagnostic(){ return JSON.stringify(this.model);}
+    get diagnostic(){ return JSON.stringify(this.config);}
 
 }

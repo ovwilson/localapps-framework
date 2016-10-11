@@ -13,27 +13,27 @@ export class InMemoryData implements InMemoryDbService {
             "id": 1,
             "name": "Livefish",
             "status":"Pending",
-            "comments":"Here are my comments"
+            "comment":"Here are my comments"
         }, {
             "id": 2,
             "name": "Flashdog",
             "status":"Pending",
-            "comments":"Here are my comments"
+            "comment":"Here are my comments"
         }, {
             "id": 3,
             "name": "Rhynyx",
             "status":"Pending",
-            "comments":"Here are my comments"
+            "comment":"Here are my comments"
         }, {
             "id": 4,
             "name": "Fivechat",
             "status":"Pending",
-            "comments":"Here are my comments"
+            "comment":"Here are my comments"
         }, {
             "id": 5,
             "name": "Rhynoodle",
             "status":"Pending",
-            "comments":"Here are my comments"
+            "comment":"Here are my comments"
         }];
 
 
