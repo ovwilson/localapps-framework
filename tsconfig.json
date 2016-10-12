@@ -13,5 +13,9 @@
   "exclude" : [ 
     "node_modules",   
     "downloads"
+  ],
+  "files" :[
+    "typings/index.d.ts",
+    "src/main.ts"
   ]
 }
