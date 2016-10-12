@@ -9,11 +9,18 @@
     "args": ["/C"],
     "tasks": [
         {
-            "taskName": "build-dev-server",
+            "taskName": "start dev-server",
             "args": ["npm start"],
+            "suppressTaskName": true,
+            "isTestCommand": true,
+            "isWatching": false
+        },
+        {
+            "taskName": "build",
+            "args": ["npm run build"],
             "suppressTaskName": true,
             "isBuildCommand": true,
             "isWatching": false
         }
-    ]
+    ]   
 }

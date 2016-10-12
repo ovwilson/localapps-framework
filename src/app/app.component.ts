@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
-import './../public/styles.css';
-import './../../common/rxjs-extensions';
+import '../../public/styles.css';
+import '../rxjs-extensions';
 
 @Component({
     selector: 'my-sample',
