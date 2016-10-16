@@ -21,6 +21,12 @@
             "suppressTaskName": true,
             "isBuildCommand": true,
             "isWatching": false
+        },
+        {
+            "taskName": "lint",
+            "args": ["npm run lint"],
+            "suppressTaskName": true,
+            "isWatching": false
         }
     ]   
 }

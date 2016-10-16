@@ -14,3 +14,4 @@ import 'rxjs';
 
 import '../node_modules/jquery/dist/cdn/jquery.min.js';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
+import "../node_modules/select2/dist/js/select2.min.js";

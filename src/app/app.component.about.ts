@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
 })
 
 export class AboutComponent {
-    
+
     title="Angular 2 About";
-    
+
     constructor() { }
     
 }

@@ -1,23 +1,24 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 
-  <div class="container-fluid">
+	<div class="container-fluid">
 
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Site Configuration</a>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Site Configuration</a>
+		</div>
+
+		<ul class="nav navbar-nav">
+			<li routerLinkActive="active"><a routerLink="/home">Home</a></li>
+			<li routerLinkActive="active"><a routerLink="/about">About</a></li>
+			<li routerLinkActive="active"><a routerLink="/configmocks">Mocks</a></li>
+			<li routerLinkActive="active"><a routerLink="/confighttp">HTTP</a></li>
+			<li routerLinkActive="active"><a routerLink="/search">Search</a></li>
+      <li routerLinkActive="active"><a routerLink="/select">Select2</a></li>
+		</ul>
     </div>
+	</nav>
 
-    <ul class="nav navbar-nav">
-      <li routerLinkActive="active"><a routerLink="/home">Home</a></li>
-      <li routerLinkActive="active"><a routerLink="/about">About</a></li>
-      <li routerLinkActive="active"><a routerLink="/configmocks">Mocks</a></li>
-      <li routerLinkActive="active"><a routerLink="/confighttp">HTTP</a></li>
-      <li routerLinkActive="active"><a routerLink="/search">Search</a></li>
-    </ul>
-
-  </div>
-
-</nav>
 
 <div class="container-fluid">
-  <router-outlet></router-outlet>
+
+	<router-outlet></router-outlet>
 </div>

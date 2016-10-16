@@ -28,6 +28,8 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryData } from './database/in-memory.data';
 import { FormComponent } from './forms/forms.component';
 
+import { Select2 } from "./directives/directives.select"
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { FormComponent } from './forms/forms.component';
     CommentsComponent,
     ConfigMocksComponent,
     ConfigHttpComponent,
-    ConfigSearchComponent
+    ConfigSearchComponent,
+    Select2
   ],
   providers: [
     APP_ROUTING_PROVIDERS,
