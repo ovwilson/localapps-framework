@@ -12,6 +12,7 @@ import 'rxjs';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
 
-import '../node_modules/jquery/dist/cdn/jquery.min.js';
-import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
-import "../node_modules/select2/dist/js/select2.min.js";
+// import "../node_modules/mdbootstrap/js/jquery-2.2.3.min.js";
+// import "../node_modules/mdbootstrap/js/tether.min.js";
+// import "../node_modules/mdbootstrap/js/bootstrap.min.js";
+// import "../node_modules/mdbootstrap/js/mdb.min.js";

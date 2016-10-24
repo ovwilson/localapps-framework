@@ -52,7 +52,9 @@ module.exports = {
     }),
 
     new webpack.ProvidePlugin({
-      $: 'jquery', jQuery: 'jquery'
+      $: 'jquery', jQuery: 'jquery',
+      Tether:require('../node_modules/mdbootstrap/js/tether.min.js'),
+      tether:'Tether'
     })
   ]
 

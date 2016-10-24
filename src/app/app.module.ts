@@ -28,7 +28,10 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryData } from './database/in-memory.data';
 import { FormComponent } from './forms/forms.component';
 
-import { Select2 } from "./directives/directives.select"
+import { Select2 } from "./directives/directives.select";
+
+import { NavbarComponent } from "./navbar/navbar.component";
+import { SideNavComponent } from "./sidenav/sidenav.component";
 
 @NgModule({
   imports: [
@@ -41,6 +44,8 @@ import { Select2 } from "./directives/directives.select"
   declarations: [
     AppComponent,
     HomeComponent,
+    NavbarComponent,
+    SideNavComponent,
     AboutComponent,
     FormComponent,
     DocumentsComponent,

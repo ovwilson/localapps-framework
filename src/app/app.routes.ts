@@ -7,8 +7,6 @@ import { FormComponent } from './forms/forms.component';
 import { ConfigMocksComponent } from './config-mocks/config-mocks.component';
 import { ConfigHttpComponent } from './config-http/config-http.component';
 import { ConfigSearchComponent } from './search/search.component';
-import { Select2 } from "./directives/directives.select";
-
 
 const APPRROUTES: Routes = [
   { path: './', component: HomeComponent },
@@ -17,8 +15,7 @@ const APPRROUTES: Routes = [
   { path: 'configmocks', component: ConfigMocksComponent },
   { path: 'confighttp', component: ConfigHttpComponent },
   { path: 'search', component: ConfigSearchComponent },
-  { path: 'form/:id', component: FormComponent },
-  { path: 'select', component: Select2 },
+  { path: 'form/:id', component: FormComponent },  
   { path: '**', component: HomeComponent }
 ];
 
