@@ -38,7 +38,9 @@ module.exports = {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
         loader: 'raw'
-      }
+      },
+      { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass']  },
+      { test: /bootstraps\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery'  }
     ]
   },
 
@@ -52,9 +54,8 @@ module.exports = {
     }),
 
     new webpack.ProvidePlugin({
-      $: 'jquery', jQuery: 'jquery',
-      Tether:require('../node_modules/mdbootstrap/js/tether.min.js'),
-      tether:'Tether'
+      $: 'jquery', jQuery: 'jquery', jquery: 'jquery',
+      Tether: require('../node_modules/mdbootstrap/js/tether.min.js')
     })
   ]
 

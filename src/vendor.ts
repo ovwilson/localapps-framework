@@ -9,10 +9,17 @@ import '@angular/platform-browser-dynamic';
 // RxJS
 import 'rxjs';
 
+
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
 
+
+
 // import "../node_modules/mdbootstrap/js/jquery-2.2.3.min.js";
-// import "../node_modules/mdbootstrap/js/tether.min.js";
-// import "../node_modules/mdbootstrap/js/bootstrap.min.js";
-// import "../node_modules/mdbootstrap/js/mdb.min.js";
+import "jquery";
+import "bootstrap-loader";
+// import "Tether";
+import "../node_modules/mdbootstrap/js/tether.min.js";
+import "../node_modules/mdbootstrap/js/bootstrap.min.js";
+import "../node_modules/mdbootstrap/js/mdb.min.js";
+
