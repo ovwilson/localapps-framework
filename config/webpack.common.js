@@ -38,9 +38,9 @@ module.exports = {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
         loader: 'raw'
-      },
-      { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass']  },
-      { test: /bootstraps\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery'  }
+      }
+     // { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass']  },
+     // { test: /bootstraps\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery'  }
     ]
   },
 
@@ -54,8 +54,10 @@ module.exports = {
     }),
 
     new webpack.ProvidePlugin({
-      $: 'jquery', jQuery: 'jquery', jquery: 'jquery',
-      Tether: require('../node_modules/mdbootstrap/js/tether.min.js')
+      $: 'jquery', jQuery: 'jquery', jquery: 'jquery'
+      // Spinner : "window.Spinner"
+      // Spinner: require('../node_modules/spin.js/spin.min.js')
+      // Tether: require('../node_modules/mdbootstrap/js/tether.min.js')
     })
   ]
 

@@ -1,23 +1,7 @@
-import { ModuleWithProviders } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './app.component.home';
-import { AboutComponent } from './app.component.about';
-import { FormComponent } from './forms/forms.component';
-import { ConfigMocksComponent } from './config-mocks/config-mocks.component';
-import { ConfigHttpComponent } from './config-http/config-http.component';
-import { ConfigSearchComponent } from './search/search.component';
+import { Routes } from "@angular/router";
 
-const APPRROUTES: Routes = [
-  { path: './', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'configmocks', component: ConfigMocksComponent },
-  { path: 'confighttp', component: ConfigHttpComponent },
-  { path: 'search', component: ConfigSearchComponent },
-  { path: 'form/:id', component: FormComponent },  
-  { path: '**', component: HomeComponent }
+export const APPRROUTES: Routes = [
+//{ path: '', redirectTo: '/remote', pathMatch: 'full'  },
+   { path: "", loadChildren: "app/dashboard/dashboard.module#DashboardModule" },
+  { path: "**", loadChildren: "app/dashboard/dashboard.module#DashboardModule" }
 ];
-
-export const APP_ROUTING_PROVIDERS: any[] = [];
-export const APPROUTING: ModuleWithProviders = RouterModule.forRoot(APPRROUTES);

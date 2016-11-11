@@ -1,9 +1,7 @@
 @import "../node_modules/mdbootstrap/css/bootstrap.min.css";
 @import "../node_modules/mdbootstrap/css/mdb.min.css";
 
-
 body {
-    background:#0147A7;
-    color:#fff;
-    margin-top:90px;
+    /* background:#0147A7; */  
+    padding-top:90px;
 }
